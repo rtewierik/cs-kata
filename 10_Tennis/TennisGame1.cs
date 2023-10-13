@@ -35,41 +35,31 @@ namespace TennisKata
             }
             else
             {
-                score = GetScoreWhenMatchOngoing(score);
+                score = GetScoreWhenMatchOngoing();
             }
             return score;
         }
 
-        private string GetScoreWhenMatchOngoing(string score)
+        private string GetScoreWhenMatchOngoing()
         {
-            int tempScore;
-            for (var i = 1; i < 3; i++)
-            {
-                if (i == 1) tempScore = _scorePlayerOne;
-                else
-                {
-                    score += "-";
-                    tempScore = _scorePlayerTwo;
-                }
+            return $"{StringifyScore(_scorePlayerOne)}-{StringifyScore(_scorePlayerTwo)}";
+        }
 
-                switch (tempScore)
-                {
-                    case 0:
-                        score += "Love";
-                        break;
-                    case 1:
-                        score += "Fifteen";
-                        break;
-                    case 2:
-                        score += "Thirty";
-                        break;
-                    case 3:
-                        score += "Forty";
-                        break;
-                }
+        private static string StringifyScore(int score)
+        {
+            switch (score)
+            {
+                case 0:
+                    return "Love";
+                case 1:
+                    return "Fifteen";
+                case 2:
+                    return "Thirty";
+                case 3:
+                    return "Forty";
             }
 
-            return score;
+            throw new Exception();
         }
 
         private string GetScoreWhenPlayerCanWin()
