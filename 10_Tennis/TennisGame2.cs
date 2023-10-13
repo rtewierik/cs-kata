@@ -130,7 +130,7 @@ namespace TennisKata
             p2point++;
         }
 
-        public void WonPoint(string player)
+        public void AddPointToPlayer(string player)
         {
             if (player == "player1")
                 P1Score();

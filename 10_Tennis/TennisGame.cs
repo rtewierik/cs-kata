@@ -2,7 +2,7 @@ namespace TennisKata
 {
 	public interface ITennisGame
 	{
-		void WonPoint(string playerName);
+		void AddPointToPlayer(string playerName);
 		string GetScore();
 	}
 }

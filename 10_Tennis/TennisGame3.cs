@@ -38,7 +38,7 @@ namespace TennisKata
             }
         }
 
-        public void WonPoint(string playerName)
+        public void AddPointToPlayer(string playerName)
         {
             if (playerName == "player1")
                 this.player1Points += 1;

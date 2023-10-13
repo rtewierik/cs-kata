@@ -95,9 +95,9 @@ namespace Tennis.Tests
 			for (var i = 0; i < highestScore; i++)
 			{
 				if (i < player1Score)
-					game.WonPoint("player1");
+					game.AddPointToPlayer("player1");
 				if (i < player2Score)
-					game.WonPoint("player2");
+					game.AddPointToPlayer("player2");
 			}
 
 			Assert.Equal(expectedScore, game.GetScore());

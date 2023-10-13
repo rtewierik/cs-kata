@@ -13,7 +13,7 @@ namespace TennisKata
             this.player2Name = player2Name;
         }
 
-        public void WonPoint(string playerName)
+        public void AddPointToPlayer(string playerName)
         {
             if (playerName == player1Name)
                 player1Score++;
